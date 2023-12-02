@@ -4,43 +4,45 @@
 $page = $_GET['page'] ?? "theloai";
 ?>
 <html>
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-   
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-   
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-   <link rel="stylesheet" href="./main.css">
-   <title>Quản trị web tổng hợp</title>
-   <style>
-      .error-msg {
-         width: 100%;
-         text-align: center;
-         color: rgb(92, 2, 2);
-         background: rgba(218, 77, 77, 0.729);
-         border-radius: 5px;
-         margin: 5px 0;
-         font-weight: 600;
-      }
-   </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+    <link rel="stylesheet" href="./main.css">
+    <title>Quản trị web tổng hợp</title>
+    <style>
+    .error-msg {
+        width: 100%;
+        text-align: center;
+        color: rgb(92, 2, 2);
+        background: rgba(218, 77, 77, 0.729);
+        border-radius: 5px;
+        margin: 5px 0;
+        font-weight: 600;
+    }
+    </style>
 </head>
+
 <body>
-   <!-- Nav tabs -->
-   <div class="container">
-   <?php require_once "admin-menu.php";?>
-   <!-- Tab panes -->
-   <div class="tab-content">
-      <div class="tab-pane active" id="">
-      <?php
+    <!-- Nav tabs -->
+    <div class="container">
+        <?php require_once "admin-menu.php";?>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="">
+                <?php
       // lấy ra danh mục thể loại hiên thị trong select
         require '../config/config.php';
         require '../model/conn.php';
@@ -143,36 +145,40 @@ $page = $_GET['page'] ?? "theloai";
             }else $msg="Vui lòng nhập đầy đủ thông tin";         
         }
       ?>
-      <div class="container col-8 m-auto">
-      <h2 class="py-2 text-center h4 "><?= $h2 ?></h2>
-      <form action="" method="post" enctype="multipart/form-data">
-            <div class="mb-3">
-                <label for="">ID Sản Phẩm</label>
-                <input type="text" name="id" value="<?= $prod['id']??"" ?>" disabled class="form-control bg-light" >
-            </div>
-            <div class="mb-3">
-                <label for="">Tên</label>
-                <input type="text" name="name" value="<?= $prod['name']??"" ?>" required class="form-control bg-light" >
-            </div>
-            <div class="mb-3">
-                <label for="">Giá</label>
-                <input type="text" name="price" value="<?= $prod['price']??"" ?>" required class="form-control bg-light" >
-            </div>
-            <div class="mb-3">
-                <label for="">Giảm Giá</label>
-                <input type="text" name="discount" value="<?= $prod['discount']??"" ?>" required class="form-control bg-light" >
-            </div>
-            <div class="mb-3">
-                <label for="img">Hình Ảnh</label>
-                <input style="display: <?php if ($id == "") {
+                <div class="container col-8 m-auto">
+                    <h2 class="py-2 text-center h4 "><?= $h2 ?></h2>
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="">ID Sản Phẩm</label>
+                            <input type="text" name="id" value="<?= $prod['id']??"" ?>" disabled
+                                class="form-control bg-light">
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Tên</label>
+                            <input type="text" name="name" value="<?= $prod['name']??"" ?>" required
+                                class="form-control bg-light">
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Giá</label>
+                            <input type="text" name="price" value="<?= $prod['price']??"" ?>" required
+                                class="form-control bg-light">
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Giảm Giá</label>
+                            <input type="text" name="discount" value="<?= $prod['discount']??"" ?>" required
+                                class="form-control bg-light">
+                        </div>
+                        <div class="mb-3">
+                            <label for="img">Hình Ảnh</label>
+                            <input style="display: <?php if ($id == "") {
                     echo "none";
-                }?>;" type="input" name="img" value="<?= $prod['img']??"" ?>" disabled class="form-control bg-light" >
-                <input type="file" name="img" value="<?= $prod['img']??"" ?>" class="form-control bg-light" >
-            </div>
-            <label for="">Loại sản phẩm</label>
-            <select name="id_cate" id="" class="form-control bg-light" >
-               <option value="0">--Chọn loại sản phẩm--</option>
-               <?php
+                }?>;" type="input" name="img" value="<?= $prod['img']??"" ?>" disabled class="form-control bg-light">
+                            <input type="file" name="img" value="<?= $prod['img']??"" ?>" class="form-control bg-light">
+                        </div>
+                        <label for="">Loại sản phẩm</label>
+                        <select name="id_cate" id="" class="form-control bg-light">
+                            <option value="0">--Chọn loại sản phẩm--</option>
+                            <?php
                     $stmt = $conn -> prepare("SELECT * FROM categories WHERE status = 1 AND deleted = 0");
                     $stmt->execute();
                     while($cate = $stmt -> fetch()){
@@ -183,54 +189,59 @@ $page = $_GET['page'] ?? "theloai";
                             echo "<option value='$cate[id]'>$cate[name]</option>";
                     }
                ?>
-            </select>
-            
-            <div class="mb-3">
-                <label for="">Lượt Xem</label>
-                <input type="text" name="view" value="<?= $prod['view']??""?>" disabled class="form-control bg-light" >
-            </div>
-            <div class="mb-3">
-                <label for="">Ngày Tạo</label>
-                <input type="text" name="create_at" value="<?= $prod['create_at']??"" ?>" disabled class="form-control bg-light" >
-            </div>
-            <div class="mb-3">
-                <label for="">Ngày Cập Nhật</label>
-                <input type="text" name="update_at" value="<?= $prod['update_at']??"" ?>" disabled class="form-control bg-light" >
-            </div>
-            <div class="mb-3">
-                <label for="">Mô Tả</label>
-                <textarea name="description" id="description" class="form-control bg-light" rows="5"><?= $prod['description']??"" ?></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="">Trạng Thái:</label>
-                <input type="radio" name="status" value="0" <?=$check0?>> Ẩn
-                <input type="radio" name="status" value="1" <?=$check1?>> hiện
-            </div>
-            <button class="btn btn-success px-4" name="submit">Lưu</button>
-            <div class="error-msg"><?= $msg ?></div>
-      </form>
-      </div>
-      </div> <!-- tab-pane -->
-   </div>
-   </div>
+                        </select>
+
+                        <div class="mb-3">
+                            <label for="">Lượt Xem</label>
+                            <input type="text" name="view" value="<?= $prod['view']??""?>" disabled
+                                class="form-control bg-light">
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Ngày Tạo</label>
+                            <input type="text" name="create_at" value="<?= $prod['create_at']??"" ?>" disabled
+                                class="form-control bg-light">
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Ngày Cập Nhật</label>
+                            <input type="text" name="update_at" value="<?= $prod['update_at']??"" ?>" disabled
+                                class="form-control bg-light">
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Mô Tả</label>
+                            <textarea name="description" id="description" class="form-control bg-light"
+                                rows="5"><?= $prod['description']??"" ?></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Trạng Thái:</label>
+                            <input type="radio" name="status" value="0" <?=$check0?>> Ẩn
+                            <input type="radio" name="status" value="1" <?=$check1?>> hiện
+                        </div>
+                        <button class="btn btn-success px-4" name="submit">Lưu</button>
+                        <div class="error-msg"><?= $msg ?></div>
+                    </form>
+                </div>
+            </div> <!-- tab-pane -->
+        </div>
+    </div>
 </body>
+
 </html>
 
 
 <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
 
 <script>
-    ClassicEditor
-        .create( document.querySelector( '#description' ),{
-            
-        } )
-        .catch( error => {
-            console.error( error );
-        } );
+ClassicEditor
+    .create(document.querySelector('#description'), {
+
+    })
+    .catch(error => {
+        console.error(error);
+    });
 </script>
 <style>
 .ck-editor__editable_inline {
-   min-height: 250px;
-   max-height: 450px;
+    min-height: 250px;
+    max-height: 450px;
 }
 </style>

@@ -60,6 +60,7 @@ if(isset($_REQUEST['page'])){
     include 'view/banner.php';
     include 'view/promo.php';
     require 'view/bestSeller.php';
+    include 'view/tt.php';
 }
 include 'view/footer.php';
 ?>

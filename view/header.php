@@ -15,32 +15,37 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JM59YES2RN"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-JM59YES2RN');
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-JM59YES2RN');
     </script>
-    <title>Mái Tóc Xinh </title>
+    <title>TimeZone</title>
     <link rel="icon" type="images/x-icon" href="assets/images/logo.png" />
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
-    <meta name="keywords" content="Mái Tóc Xinh"/>
+    <meta name="keywords" content="Mái Tóc Xinh" />
     <script>
-        addEventListener("load", function() {
-            setTimeout(hideURLbar, 0);
-        }, false);
-        var manghinh = [];
-        function nap(){
-            for(var i =0; i < 10; i++){
-                manghinh[i] = new Image();
-                manghinh[i].src="../assets/images/Property 1=Variant"+i+".png";
-            }
+    addEventListener("load", function() {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    var manghinh = [];
+
+    function nap() {
+        for (var i = 0; i < 10; i++) {
+            manghinh[i] = new Image();
+            manghinh[i].src = "../assets/images/Property 1=Variant" + i + ".png";
         }
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
+    }
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
     </script>
     <!-- //Meta tag Keywords -->
 
@@ -50,14 +55,15 @@
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/product.css">
     <link rel="stylesheet" href="assets/css/cart.css">
-    
+
     <!-- Style-CSS -->
     <!-- font-awesome-icons -->
     <!-- <link href="assets/css/font-awesome.css" rel="stylesheet"> -->
     <!-- //font-awesome-icons -->
     <!-- /Fonts -->
     <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900"
+        rel="stylesheet">
     <!-- //Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
@@ -65,77 +71,87 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
-        .user{
-            display: flex;
+    .user {
+        display: flex;
+    }
+
+    .user>a,
+    image {
+        margin-top: -4px;
+    }
+
+    .user:hover>ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    img#imgUser {
+        margin-left: 10px;
+        margin-top: -2px;
+        width: 50px;
+        height: 50px;
+        border-radius: 30px
+    }
+
+    @media (max-width: 768px) {
+        div#imgUser {
+            display: none;
         }
-        .user>a,image{
-            margin-top: -4px;
-        }
-        .user:hover>ul{
-            display: flex;
-            flex-wrap: wrap;
-        }
-        img#imgUser{
-            margin-left: 10px; 
-            margin-top: -2px; 
-            width: 50px; 
-            height: 50px;
-            border-radius: 30px
-        }
-        @media (max-width: 768px){
-            div#imgUser{
-                display: none;
-            }
-        }
+    }
     </style>
 </head>
 
 <body onload="nap()">
     <!-- main-content -->
-    <div class="container-fluid px-lg-5">
-        <nav class="py-4">
-            <!-- start main-menu  -->
-            <div class="container">
-                <div class="main-menu">
-                    <div id="menu-768">
-                        <label id="menu_alert" for="drop" class="toggle">Menu
-                            <div style="display: <?php
+
+    <div class="a">
+        <div class="container-fluid px-lg-5">
+            <nav class="py-4">
+                <!-- start main-menu  -->
+                <div class="container">
+                    <div class="main-menu">
+                        <div id="menu-768">
+                            <label id="menu_alert" for="drop" class="toggle">Menu
+                                <div style="display: <?php
                                 // if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                                 //     echo "block";
                                 // }else{
                                 //     echo "none";
                                 // }
                                 ?>;" class="cart_hover">
-                                <?php
+                                    <?php
                                     // if (isset($_SESSION['cart'])) {
                                     //     echo count($_SESSION['cart']);
                                     // }
                                 ?>
-                            </div>
-                        </label>
-                    </div>
-                    <div id="logo">
-                        <a href="index.php"><img style="width: 250px; height: 100px;" src="assets/images/logo.png" alt=""></a>
-                    </div>
-                    <div id="search">
-                        <form id="search" action="index.php?page=search" method="post" >
-                            <input name="key" id="search" type="text" placeholder="Nhập ít nhất 3 ký tự để tìm sản phẩm">
-                            <button name="submit" id="search" type="submit"><i class="fa fa-search" style="color: #255c45;"></i></button>
-                            <div id="searchresult">
+                                </div>
+                            </label>
+                        </div>
+                        <div id="logo">
+                            <a href="index.php"><img style="width: 250px; height: 100px;"
+                                    src="assets/images/TIMEZONE.png" alt=""></a>
+                        </div>
+                        <div id="search">
+                            <form id="search" action="index.php?page=search" method="post">
+                                <input name="key" id="search" type="text"
+                                    placeholder="Nhập ít nhất 3 ký tự để tìm sản phẩm">
+                                <button name="submit" id="search" type="submit"><i class="fa fa-search"
+                                        style="color: #255c45;"></i></button>
+                                <div id="searchresult">
 
-                            </div>
-                        </form>
-                        
-                    </div>
-                    <!-- start -->
-                    <div class="container-user">
-                        <div id="container-login">
-                            <?php
+                                </div>
+                            </form>
+
+                        </div>
+                        <!-- start -->
+                        <div class="container-user">
+                            <div id="container-login">
+                                <?php
                                 // if (isset($_COOKIE['usr'])) {
                                 //     echo "class='user'";
                                 // }
                             ?>
-                            <?php
+                                <?php
                                 if (isset($_COOKIE['usr'])) {
                                     // $username = ;
                                     $stmt = $conn -> query("SELECT * FROM usr where username = '".$_COOKIE['usr']."'");
@@ -159,9 +175,8 @@
                                     echo '<a id="login" href="index.php?page=login">Đăng Nhập/Đăng Ký</a>';
                                 }
                             ?>
-                        </div>
-                        <div id="imgUser"
-                                    style="display: 
+                            </div>
+                            <div id="imgUser" style="display: 
                                     <?php
                                         if (isset($_COOKIE['usr'])) {
                                             echo "block";
@@ -170,38 +185,36 @@
                                         }
                                     ?>;">
                                 <!-- start img -->
-                                <img id="imgUser"   
-                                    src="<?php
+                                <img id="imgUser" src="<?php
                                         if (isset($_COOKIE['usr'])) {
                                             echo "uploads_user/".$usr['img'];
                                         }
-                                    ?>" 
-                                alt="">
+                                    ?>" alt="">
                                 <!-- end img -->
+                            </div>
                         </div>
-                    </div>
-                    <!-- end -->
-                    <div class="div-cart">
-                        <a class="cart_icon" href="index.php?page=cart">
-                            <i id="cart_header" class="fa fa-shopping-cart"></i>
-                            <div style="display: <?php
+                        <!-- end -->
+                        <div class="div-cart">
+                            <a class="cart_icon" href="index.php?page=cart">
+                                <i id="cart_header" class="fa fa-shopping-cart"></i>
+                                <div style="display: <?php
                                 if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                                     echo "block";
                                 }else{
                                     echo "none";
                                 }
                             ?>;" class="cart_hover">
-                                <?php
+                                    <?php
                                     if (isset($_SESSION['cart'])) {
                                         echo count($_SESSION['cart']);
                                     }
                                 ?>
-                            </div>
-                            
-                        </a>
-                        <div class="list-cart-hover">
-                            <div class="cau"></div>
-                            <?php
+                                </div>
+
+                            </a>
+                            <div class="list-cart-hover">
+                                <div class="cau"></div>
+                                <?php
                                 if (isset($_SESSION['cart']) & $_SESSION['cart'] != []) {
                                     $i=0;
                                     foreach ($_SESSION['cart'] as $value) {
@@ -247,82 +260,88 @@
                                     ';
                                 }
                             ?>
-                            
-                            
+
+
+                            </div>
                         </div>
-                    </div>
-                    <div id="menu">
-                        <label style="display: none;" id="menu_alert" for="drop" class="toggle">Menu
-                            <div style="display: <?php
+                        <div id="menu">
+                            <label style="display: none;" id="menu_alert" for="drop" class="toggle">Menu
+                                <div style="display: <?php
                                 // if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                                 //     echo "block";
                                 // }else{
                                 //     echo "none";
                                 // }
                                 ?>;" class="cart_hover">
-                            </div>
-                        </label>
-                        <input type="checkbox" id="drop" />
-                        <ul class="menu mt-2">
-                            <li class="active"><a href="index.php">Trang Chủ</a></li>
-                            <li>
-                                <label for="drop-1" class="toggle">Danh Mục<span class="fa fa-angle-down" aria-hidden="true"></span> </label>
-                                <a href="#">Danh Mục<span class="fa fa-angle-down" aria-hidden="true"></span></a>
-                                <input type="checkbox" id="drop-1" />
-                                <ul>
-                                <?php
+                                </div>
+                            </label>
+                            <input type="checkbox" id="drop" />
+                            <ul class="menu mt-2">
+                                <li class="active"><a href="index.php">Trang Chủ</a></li>
+                                <li>
+                                    <label for="drop-1" class="toggle">Danh Mục<span class="fa fa-angle-down"
+                                            aria-hidden="true"></span> </label>
+                                    <a href="#">Danh Mục<span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                                    <input type="checkbox" id="drop-1" />
+                                    <ul>
+                                        <?php
                                     $stmt = $conn -> query("SELECT * FROM categories WHERE status = 1 and deleted = 0 ORDER BY stt");
                                     while ($cate = $stmt->fetch()) {
                                         Echo "<li><a href='index.php?page=categories&id_cate=$cate[0]'>$cate[1]</a></li>";
                                     }
                                 ?>
-                                </ul>
-                            </li>
-                            <li class="active"><a href="index.php?page=about">Về chúng tôi</a></li>
-                            <li>
-                                <label for="drop-2" class="toggle">Bài Viết<span class="fa fa-angle-down" aria-hidden="true"></span> </label>
-                                <a href="#">Bài Viết<span class="fa fa-angle-down" aria-hidden="true"></span></a>
-                                <input type="checkbox" id="drop-2" />
-                                <ul>
-                                <?php
+                                    </ul>
+                                </li>
+                                <li class="active"><a href="index.php?page=about">Về chúng tôi</a></li>
+                                <li>
+                                    <label for="drop-2" class="toggle">Bài Viết<span class="fa fa-angle-down"
+                                            aria-hidden="true"></span> </label>
+                                    <a href="#">Bài Viết<span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                                    <input type="checkbox" id="drop-2" />
+                                    <ul>
+                                        <?php
                                     $stmt = $conn -> query("SELECT * FROM post_categories WHERE status = 1 AND deleted = 0 ORDER BY stt");
                                     while ($cate = $stmt->fetch()) {
                                         Echo "<li><a href='index.php?page=blog&id_cate=$cate[0]'>$cate[1]</a></li>";
                                     }
                                 ?>
-                                </ul>
-                            </li>
-                            <li class="active"><a href="index.php?page=contact">Liên Hệ</a></li>
-                        </ul>
-                    </div>
+                                    </ul>
+                                </li>
+                                <li class="active"><a href="index.php?page=contact">Liên Hệ</a></li>
+                            </ul>
+                        </div>
 
+                    </div>
+                    <!-- end main-menu  -->
                 </div>
-                <!-- end main-menu  -->
-            </div>
-        </nav>
+            </nav>
+        </div>
     </div>
 
-<script type="text/javascript">
-    $("#searchresult").css("display","none");
-    $(document).ready(function(){
-        $("input#search").keyup(function(){
+
+    <script type="text/javascript">
+    $("#searchresult").css("display", "none");
+    $(document).ready(function() {
+        $("input#search").keyup(function() {
             var input = $(this).val();
             // alert(input);
-            if(input.length >= 3){
+            if (input.length >= 3) {
                 $.ajax({
                     url: "model/search.php",
                     method: "POST",
-                    data:{input:input},
+                    data: {
+                        input: input
+                    },
 
-                    success:function(data){
+                    success: function(data) {
                         $("#searchresult").html(data);
                     }
                 });
-                $("#searchresult").css("display","block");
-            }else{
-                $("#searchresult").css("display","none");
+                $("#searchresult").css("display", "block");
+            } else {
+                $("#searchresult").css("display", "none");
             }
 
         })
     });
-</script>
+    </script>
