@@ -21,7 +21,7 @@
     
       gtag('config', 'G-JM59YES2RN');
     </script>
-    <title>Mái Tóc Xinh </title>
+    <title>TIMEZONE</title>
     <link rel="icon" type="images/x-icon" href="assets/images/logo.png" />
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -115,7 +115,7 @@
                         </label>
                     </div>
                     <div id="logo">
-                        <a href="index.php"><img style="width: 250px; height: 100px;" src="assets/images/logo.png" alt=""></a>
+                        <a href="index.php"><img style="width: 250px; height: 100px;" src="assets/images/PG1.png" alt=""></a>
                     </div>
                     <div id="search">
                         <form id="search" action="index.php?page=search" method="post" >
