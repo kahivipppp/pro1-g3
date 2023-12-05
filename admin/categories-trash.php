@@ -13,8 +13,8 @@
     </thead>
     <tbody>
     <?php
-        require '../config/config.php';
-        require '../model/conn.php';
+        require '../mvc/config/config.php';
+        require '../mvc/model/conn.php';
         $stmt = $conn -> query("SELECT * FROM categories where deleted = 1"); 
         while($cate = $stmt->fetch()){
             // if($item['lang']=='vi') $lang='Vietnamse'; else $lang='English';

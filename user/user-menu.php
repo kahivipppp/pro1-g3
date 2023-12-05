@@ -23,7 +23,7 @@
         <a class="nav-link text-danger" href="#">Chào <?php echo $_COOKIE['usr']?></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="../" target="public">Trang Chủ</a>
+        <a class="nav-link" href="../mvc/index.php" target="public">Trang Chủ</a>
     </li>
     <li class="nav-item">
     <a class="nav-link" data-toggle="tab" href="../">Thoát </a>

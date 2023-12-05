@@ -32,8 +32,8 @@
     </thead>
     <tbody>
     <?php
-        require '../config/config.php';
-        require '../model/conn.php';
+        require '../mvc/config/config.php';
+        require '../mvc/model/conn.php';
         $stmt = $conn -> query("SELECT * FROM product join categories where product.id_cate = categories.id $id_cate AND product.deleted = 0 order by product.id"); 
         while($prod = $stmt->fetch()){
             if($prod["11"] == 0){
@@ -46,7 +46,7 @@
                 <td><a href = '../index.php?page=product&id_prod=$prod[0]'>$prod[1]</a></td>
                 <td>".number_format($prod["price"], 0, "," , ".")."</td>
                 <td>".number_format($prod["discount"], 0, "," , ".")."</td>
-                <td><img src='../uploads_product/$prod[img]' style='width: 70px; height: 70px;' alt=''></td>
+                <td><img src='../upload/uploads_product/$prod[img]' style='width: 70px; height: 70px;' alt=''></td>
                 <td></td>
                 <td>$prod[view]</td>
                 <td>$prod[13]</td>

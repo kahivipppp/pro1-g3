@@ -26,8 +26,8 @@
     </thead>
     <tbody>
     <?php
-        require '../config/config.php';
-        require '../model/conn.php';
+        require '../mvc/config/config.php';
+        require '../mvc/model/conn.php';
         $stmt = $conn -> query("SELECT * FROM product join categories where product.id_cate = categories.id $id_cate AND product.deleted = 1 order by product.id"); 
         while($prod = $stmt->fetch()){
             if($prod[16] == 1){

@@ -15,8 +15,8 @@
     </thead>
     <tbody>
     <?php
-        require '../config/config.php';
-        require '../model/conn.php';
+require '../mvc/config/config.php';
+require '../mvc/model/conn.php';
         if(isset($_REQUEST['id_order'])){
             $id_order = " where id_order = ".$_REQUEST['id_order']."";
         }else{

@@ -13,8 +13,8 @@
     </thead>
     <tbody>
     <?php
-        require '../config/config.php';
-        require '../model/conn.php';
+        require '../mvc/config/config.php';
+        require '../mvc/model/conn.php';
         if (isset($_COOKIE['usr'])) {
             $username = "where id_user = " ."'" .$_COOKIE['usr'] ."'" ;
         }

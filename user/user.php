@@ -47,14 +47,6 @@
         <?php 
             if(isset($_REQUEST['page'])){
                 $page = $_REQUEST['page'];  
-                // switch ($page){
-                //     case 'categories':
-                //         include 'categories.php';
-                //         break;
-                //     default :
-                //         include 'categories.php';
-                //         break;
-                // }
                 include "$page.php";
             }else{
                 include 'info.php';

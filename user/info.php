@@ -42,8 +42,8 @@ $page = $_GET['page'] ?? "theloai";
       <div class="tab-pane active" id="">
       <?php
       // lấy ra danh mục thể loại hiên thị trong select
-        require '../config/config.php';
-        require '../model/conn.php';
+        require '../mvc/config/config.php';
+        require '../mvc/model/conn.php';
         $msg="";
         $username=$_COOKIE['usr'];
         if($username!=""){
@@ -59,10 +59,10 @@ $page = $_GET['page'] ?? "theloai";
             if (isset($_FILES['img']) && $_FILES['img']['name']!= "") {
                 $img=$user[0]."-".$_FILES['img']['name']??"";
                 if ($user[3] != "user.png") {
-                    $file_delete = "../uploads_user/" . $user[3];
+                    $file_delete = "../upload/uploads_user/" . $user[3];
                     unlink("$file_delete");
                 }
-                $target_dir = "../uploads_user/";
+                $target_dir = "../upload/uploads_user/";
                 $target_file = $target_dir . $img;
                 $uploadOk = 1;
                 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -152,7 +152,7 @@ $page = $_GET['page'] ?? "theloai";
                 <input style="display: <?php if ($id == "") {
                     echo "none";
                 }?>;" type="input" name="img" value="<?= $user[3]??"" ?>" disabled class="form-control bg-light" >
-                <img width="100px" height="100px" src="../uploads_user/<?= $user[3]??"" ?>" alt="">
+                <img width="100px" height="100px" src="../upload/uploads_user/<?= $user[3]??"" ?>" alt="">
                 <input type="file" name="img" value="<?= $user[3]??"" ?>" class="form-control bg-light" >
             </div>
             <div class="mb-3">

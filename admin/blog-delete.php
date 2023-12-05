@@ -1,6 +1,6 @@
 <?php
-require "../config/config.php";
-require "../model/conn.php";
+require "../mvc/config/config.php";
+require "../mvc/model/conn.php";
 
     if (isset($_POST["id_delete"])) {
         $id = $_POST["id_delete"];

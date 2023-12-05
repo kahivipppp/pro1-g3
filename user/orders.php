@@ -18,8 +18,8 @@
     </thead>
     <tbody>
     <?php
-        require '../config/config.php';
-        require '../model/conn.php';
+        require '../mvc/config/config.php';
+        require '../mvc/model/conn.php';
         if (isset($_COOKIE['usr'])) {
             $id_user = "and id_user = " . "'".$_COOKIE['usr']."'";
         }

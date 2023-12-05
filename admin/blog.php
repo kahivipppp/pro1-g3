@@ -30,8 +30,8 @@
     </thead>
     <tbody>
     <?php
-        require '../config/config.php';
-        require '../model/conn.php';
+        require '../mvc/config/config.php';
+        require '../mvc/model/conn.php';
         $stmt = $conn -> query("SELECT * FROM post join post_categories where post.id_cate = post_categories.id $id_cate AND post.deleted = 0 order by post.id"); 
         while($blog = $stmt->fetch()){
             if($blog["10"] == 0){

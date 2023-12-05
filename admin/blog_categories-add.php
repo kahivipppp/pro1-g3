@@ -35,8 +35,8 @@ $page = $_GET['page'] ?? "theloai";
       <div class="tab-pane active" id="">
       <?php
       // lấy ra danh mục thể loại hiên thị trong select
-        require '../config/config.php';
-        require '../model/conn.php';
+        require '../mvc/config/config.php';
+        require '../mvc/model/conn.php';
         $msg="";
         $h2="THÊM MỚI LOẠI BÀI VIẾT";
         $id=$_GET['id']??"";

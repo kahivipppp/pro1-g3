@@ -19,8 +19,8 @@
     </thead>
     <tbody>
     <?php
-        require '../config/config.php';
-        require '../model/conn.php';
+        require '../mvc/config/config.php';
+        require '../mvc/model/conn.php';
         $stmt = $conn ->prepare("SELECT * FROM orders 
         join (SELECT id_order, sum(total_money) as total_money from order_details GROUP BY id_order) as order_details 
         where orders.id = order_details.id_order ORDER BY orders.id"); 
